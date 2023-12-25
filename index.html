@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression Js</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validate(){
+            var email=document.getElementById("email").value;
+            var reg=/^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+            var  result=reg.test(email);
+
+            if(result==false){
+                alert("invalid email id!");
+                return false;
+            }else{
+               alert("success !")
+            }
+            return true;
+        }
+
+
+
+    </script>
+</head>
+<body>
+<div class="card">
+  <h1>  Email Validation Using Regular Expression Js</h1>
+        <!-- form -->
+      <form action=""  method="post" onsubmit="return validate()">
+        <!-- Email -->
+        <input type="text" name="email" placeholder="Enter Your Email"  id="email"/>
+        <br/>
+        <br/>
+         <!-- Button -->
+         <button type="submit" name="submit">Register</button>
+        <br>
+        <!-- credit -->
+        <a href="https://github.com/nvanxndhu">&copy;anandhunv</a>
+ </form>
+ </div>
+</body>
+</html>
